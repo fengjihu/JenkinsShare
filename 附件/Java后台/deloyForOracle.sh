@@ -191,7 +191,8 @@ echo "##Running docker container: "${DOCKER_NAME}
 #/usr/bin/docker run --name ${DOCKER_NAME}_d1 -d -p ${SPORT}:${DPORT} ${DOCKER_NAME}:${PROJ_VERSION}
 #/usr/bin/docker run --name=${DOCKER_NAME}_${PROJ_VERSION} --net host -d ${DOCKER_NAME}:${PROJ_VERSION}
 #解决时区的问题
-/usr/bin/docker run --name=${DOCKER_NAME}_${PROJ_VERSION} -e TZ="Asia/Shanghai" --net host -d ${DOCKER_NAME}:${PROJ_VERSION}
+#/usr/bin/docker run --name=${DOCKER_NAME}_${PROJ_VERSION} -e TZ="Asia/Shanghai" --net host -d ${DOCKER_NAME}:${PROJ_VERSION}
+/usr/bin/docker run --name=${DOCKER_NAME}_${PROJ_VERSION}  --net host -d ${DOCKER_NAME}:${PROJ_VERSION}
 #/usr/bin/docker run ${cmd}
 #/usr/bin/docker run -v /etc/timezone:/etc/timezone -v /etc/localtime:/etc/localtime --name=${DOCKER_NAME}_${PROJ_VERSION} --net host -d ${DOCKER_NAME}:${PROJ_VERSION}
 echo ""
